@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Event Handler Zavira</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="div1">
+            Hewan Bebek
+            <audio id="audio1" src="bebek.mp3"></audio>
+        </div>
+        <div id="div2">
+            Hewan Kucing
+            <audio id="audio2" src="kucing.mp3"></audio>
+        </div>
+        <div id="div3">
+            Hewan Kuda
+            <audio id="audio3" src="kuda.mp3"></audio>
+        </div>
+
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#div1").mouseover(function () {
+                    $(this).css({
+                        background: "url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/White_domesticated_duck%2C_stretching.jpg/330px-White_domesticated_duck%2C_stretching.jpg')",
+                    });
+                    document.getElementById("audio1").play();
+                });
+
+                $("#div1").mouseout(function () {
+                    $(this).css({
+                        background: "green",
+                    });
+                    document.getElementById("audio1").pause();
+                    document.getElementById("audio1").currentTime = 0;
+                });
+
+                $("#div2").mouseover(function () {
+                    $(this).css({
+                        background:
+                            "url('https://cdn0-production-images-kly.akamaized.net/D7ZP3GfIPGwm-HOXGjNxIH1DMg4=/640x360/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4219701/original/009682100_1667963905-GettyImages-1068070022-cc640df4be4d4c3a8b4356f76beeee60.jpg')",
+                    });
+                    document.getElementById("audio2").play();
+                });
+
+                $("#div2").mouseout(function () {
+                    $(this).css({
+                        background: "yellow",
+                    });
+                    document.getElementById("audio2").pause();
+                    document.getElementById("audio2").currentTime = 0;
+                });
+                $("#div3").mouseover(function () {
+                    $(this).css({
+                        background:
+                            "url('https://png.pngtree.com/thumb_back/fw800/background/20230518/pngtree-brown-horse-galloping-across-the-grass-in-grass-image_2584437.jpg')",
+                    });
+                    document.getElementById("audio3").play();
+                });
+
+                $("#div3").mouseout(function () {
+                    $(this).css({
+                        background: "red",
+                    });
+                    document.getElementById("audio3").pause();
+                    document.getElementById("audio3").currentTime = 0;
+                });
+            });
+        </script>
+    </body>
+</html>
